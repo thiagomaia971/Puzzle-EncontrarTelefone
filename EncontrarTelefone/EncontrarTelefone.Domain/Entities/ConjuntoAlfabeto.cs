@@ -19,7 +19,7 @@ namespace EncontrarTelefone.Domain.Entities
 
         public char GetMatched(char key)
         {
-            
+
             if (key == '-' || key == '0' || key == '1')
                 return key;
 
@@ -30,7 +30,6 @@ namespace EncontrarTelefone.Domain.Entities
 
             return Convert.ToChar(value.ToString());
         }
-
 
     }
 }

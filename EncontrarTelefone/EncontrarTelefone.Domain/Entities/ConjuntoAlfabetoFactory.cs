@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EncontrarTelefone.Domain.Entities
 {
-    public class ConjuntoAlfabetoFactory
+    public static class ConjuntoAlfabetoFactory
     {
         public static IDictionary<char, int> Get()
         {
@@ -47,6 +47,11 @@ namespace EncontrarTelefone.Domain.Entities
             _conjunto.Add('Z', 9);
 
             return _conjunto;
+        }
+
+        public static int ToInt(this char value)
+        {
+            return Convert.ToInt32(value.ToString());
         }
     }
 }

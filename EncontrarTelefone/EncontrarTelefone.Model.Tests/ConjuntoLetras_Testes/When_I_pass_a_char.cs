@@ -15,7 +15,7 @@ namespace EncontrarTelefone.Domain.Testes.ConjuntoLetras_Testes
         public void A_return_the_value_2()
         {
             var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatched('A');
+            var value = conjuntoAlfabeto.GetMatchedLetra('A');
 
             Assert.AreEqual('2', value);
         }
@@ -24,7 +24,7 @@ namespace EncontrarTelefone.Domain.Testes.ConjuntoLetras_Testes
         public void K_return_the_value_5()
         {
             var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatched('K');
+            var value = conjuntoAlfabeto.GetMatchedLetra('K');
 
             Assert.AreEqual('5', value);
         }

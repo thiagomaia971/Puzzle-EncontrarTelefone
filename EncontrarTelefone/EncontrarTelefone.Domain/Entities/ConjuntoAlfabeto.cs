@@ -17,7 +17,7 @@ namespace EncontrarTelefone.Domain.Entities
             this._conjunto = ConjuntoAlfabetoFactory.Get();
         }
 
-        public char GetMatched(char key)
+        public char GetMatchedLetra(char key)
         {
 
             if (key == '-' || key == '0' || key == '1')
@@ -31,5 +31,16 @@ namespace EncontrarTelefone.Domain.Entities
             return Convert.ToChar(value.ToString());
         }
 
+        public string GetMatchedFrase(string frase)
+        {
+            string telefone = "";
+
+            foreach (var letra in frase)
+            {
+                telefone += this.GetMatchedLetra(letra).ToString();
+            }
+
+            return telefone;
+        }
     }
 }

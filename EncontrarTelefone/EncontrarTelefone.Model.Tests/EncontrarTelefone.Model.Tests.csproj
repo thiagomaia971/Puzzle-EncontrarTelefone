@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="ConjuntoLetras_Testes\BadPath\When_a_pass_a_char_without_the_dictionary.cs" />
     <Compile Include="ConjuntoLetras_Testes\When_I_pass_a_char.cs" />
+    <Compile Include="ConjuntoLetras_Testes\When_I_pass_a_frase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

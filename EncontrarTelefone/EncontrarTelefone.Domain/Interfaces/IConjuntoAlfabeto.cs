@@ -2,6 +2,6 @@
 {
     public interface IConjuntoAlfabeto
     {
-        char GetMatched(char v);
+        char GetMatchedLetra(char v);
     }
 }

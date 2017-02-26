@@ -14,19 +14,17 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes.BadPath
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void Key_2_return_the_value_2()
+        public void Key_2_return_the_exception()
         {
             var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatched('2');
-
-            Assert.AreEqual('2', value);
+            var value = conjuntoAlfabeto.GetMatchedLetra('2');
         }
 
         [TestMethod]
-        public void Key_caracterSpecial_return_the_value_caractere()
+        public void Key_caracterHifen_return_the_value_caractere()
         {
             var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatched('-');
+            var value = conjuntoAlfabeto.GetMatchedLetra('-');
 
             Assert.AreEqual('-', value);
         }
@@ -35,9 +33,26 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes.BadPath
         public void Key_1_return_the_value_1()
         {
             var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatched('1');
+            var value = conjuntoAlfabeto.GetMatchedLetra('1');
 
             Assert.AreEqual('1', value);
+        }
+
+        [TestMethod]
+        public void Key_0_return_the_value_0()
+        {
+            var conjuntoAlfabeto = new ConjuntoAlfabeto();
+            var value = conjuntoAlfabeto.GetMatchedLetra('0');
+
+            Assert.AreEqual('0', value);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Key_caractereBarra_return_the_exception()
+        {
+            var conjuntoAlfabeto = new ConjuntoAlfabeto();
+            var value = conjuntoAlfabeto.GetMatchedLetra('\\');
         }
 
     }

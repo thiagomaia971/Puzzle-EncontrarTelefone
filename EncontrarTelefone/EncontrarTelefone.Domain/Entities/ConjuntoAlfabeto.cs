@@ -14,7 +14,7 @@ namespace EncontrarTelefone.Domain.Entities
 
         public ConjuntoAlfabeto()
         {
-            this._conjunto = ConjuntoAlfabetoFactory.Get();
+            this._conjunto = new ConjuntoAlfabetoFactory().Get();
         }
 
         public char GetMatchedLetra(char key)

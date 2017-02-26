@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontrarTelefone.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontrarTelefone.Model.Tests", "EncontrarTelefone.Model.Tests\EncontrarTelefone.Model.Tests.csproj", "{509F9485-7D7E-42FA-91A3-C0D983FA0A59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontrarTelefone.ConsoleApp", "EncontrarTelefone.ConsoleApp\EncontrarTelefone.ConsoleApp.csproj", "{263656F5-4671-471A-9381-965A46DB46CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,22 @@ Global
 		{509F9485-7D7E-42FA-91A3-C0D983FA0A59}.Release|x64.Build.0 = Release|Any CPU
 		{509F9485-7D7E-42FA-91A3-C0D983FA0A59}.Release|x86.ActiveCfg = Release|Any CPU
 		{509F9485-7D7E-42FA-91A3-C0D983FA0A59}.Release|x86.Build.0 = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|x64.Build.0 = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Debug|x86.Build.0 = Debug|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|ARM.Build.0 = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|x64.ActiveCfg = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|x64.Build.0 = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|x86.ActiveCfg = Release|Any CPU
+		{263656F5-4671-471A-9381-965A46DB46CE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

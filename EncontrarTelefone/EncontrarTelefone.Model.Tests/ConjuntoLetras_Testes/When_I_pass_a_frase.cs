@@ -1,4 +1,5 @@
 ﻿using EncontrarTelefone.Domain.Entities;
+using EncontrarTelefone.Domain.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes
         [TestMethod]
         public void ABC_returns_222()
         {
-            var conjuntoAlfabeto = new ConjuntoAlfabeto();
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
 
             string frase = "ABC";
             string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
@@ -26,7 +27,7 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes
         [TestMethod]
         public void WXYZ_returns_9999()
         {
-            var conjuntoAlfabeto = new ConjuntoAlfabeto();
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
 
             string frase = "WXYZ";
             string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
@@ -37,7 +38,7 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes
         [TestMethod]
         public void HOME_returns_4663()
         {
-            var conjuntoAlfabeto = new ConjuntoAlfabeto();
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
 
             string frase = "HOME";
             string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
@@ -48,7 +49,7 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes
         [TestMethod]
         public void HOME_SWEET_HOME_returns_4663()
         {
-            var conjuntoAlfabeto = new ConjuntoAlfabeto();
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
 
             string frase = "1-HOME-SWEET-HOME";
             string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);

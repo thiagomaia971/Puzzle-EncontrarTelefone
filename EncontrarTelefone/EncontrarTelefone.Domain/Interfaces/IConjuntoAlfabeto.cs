@@ -2,7 +2,10 @@
 {
     public interface IConjuntoAlfabeto
     {
-        char GetMatchedLetra(char v);
-        string GetMatchedFrase(string v);
+        string Frase { get; set; }
+        string Telefone { get; set; }
+
+        string GetMatched();
+
     }
 }

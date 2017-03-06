@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EncontrarTelefone.Domain.Entities
+namespace EncontrarTelefone.Domain.Interfaces
 {
     public interface IConjuntoAlfabetoFactory
     {

@@ -14,45 +14,58 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes
     {
 
         [TestMethod]
+        [Owner("Thiago Maia da Costa")]
+        [Description("WHEN I pass ABC THEN return 222")]
+        [Priority(1)]
+        [WorkItem(1570)]
         public void ABC_returns_222()
         {
-            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
 
             string frase = "ABC";
-            string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto(frase);
+
+            string telefone = conjuntoAlfabeto.GetMatched();
 
             Assert.AreEqual("222", telefone);
         }
 
         [TestMethod]
+        [Owner("Thiago Maia da Costa")]
+        [Description("WHEN I pass WXYZ THEN return 9999")]
+        [Priority(1)]
+        [WorkItem(1570)]
         public void WXYZ_returns_9999()
         {
-            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
-
             string frase = "WXYZ";
-            string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto(frase);
 
+            string telefone = conjuntoAlfabeto.GetMatched();
             Assert.AreEqual("9999", telefone);
         }
 
         [TestMethod]
+        [Owner("Thiago Maia da Costa")]
+        [Description("WHEN I pass HOME THEN return 4663")]
+        [Priority(1)]
+        [WorkItem(1570)]
         public void HOME_returns_4663()
         {
-            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
-
             string frase = "HOME";
-            string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto(frase);
+
+            string telefone = conjuntoAlfabeto.GetMatched();
 
             Assert.AreEqual("4663", telefone);
         }
 
         [TestMethod]
-        public void HOME_SWEET_HOME_returns_4663()
+        public void HOME_SWEET_HOME_returns_1_4663_79338_4663 ()
         {
-            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto();
-
             string frase = "1-HOME-SWEET-HOME";
-            string telefone = conjuntoAlfabeto.GetMatchedFrase(frase);
+
+            IConjuntoAlfabeto conjuntoAlfabeto = new ConjuntoAlfabeto(frase);
+
+            string telefone = conjuntoAlfabeto.GetMatched();
 
             Assert.AreEqual("1-4663-79338-4663", telefone);
         }

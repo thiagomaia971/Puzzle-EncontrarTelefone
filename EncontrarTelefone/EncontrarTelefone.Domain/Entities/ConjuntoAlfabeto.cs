@@ -4,26 +4,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace EncontrarTelefone.Domain.Entities
 {
     public class ConjuntoAlfabeto : IConjuntoAlfabeto
     {
 
-        private IDictionary<char, int> _conjunto;
+        public IConjuntoAlfabetoFactory _conjunto { get; private set; }
+        public string Frase { get; set; }
+        public string Telefone { get; set; }
 
-        public ConjuntoAlfabeto()
+        public ConjuntoAlfabeto(string frase)
         {
-            this._conjunto = new ConjuntoAlfabetoFactory().Get();
+            this.Frase = frase;
+            _conjunto = new ConjuntoAlfabetoFactory();
         }
 
-        public char GetMatchedLetra(char key)
+        public void HaveFrase()
+        {
+            if (string.IsNullOrEmpty(Frase))
+                throw new FraseIsMissingException();
+        }
+
+        public string GetMatched()
+        {
+            Telefone = "";
+
+            foreach (var letra in this.Frase)
+            {
+                Telefone += this.GetMatchedLetra(letra).ToString();
+            }
+
+            return Telefone;
+        }
+
+        private char GetMatchedLetra(char key)
         {
 
             if (key == '-' || key == '0' || key == '1')
                 return key;
 
-            var value = this._conjunto.SingleOrDefault(x => x.Key == key).Value;
+            var value = this._conjunto.Get().SingleOrDefault(x => x.Key == key).Value;
 
             if (value == 0)
                 throw new ArgumentException("Letra nao contem no alfabeto.");
@@ -31,16 +53,25 @@ namespace EncontrarTelefone.Domain.Entities
             return Convert.ToChar(value.ToString());
         }
 
-        public string GetMatchedFrase(string frase)
+    }
+
+    [Serializable]
+    internal class FraseIsMissingException : Exception
+    {
+        public FraseIsMissingException() : base("Está faltando a frase.")
         {
-            string telefone = "";
+        }
 
-            foreach (var letra in frase)
-            {
-                telefone += this.GetMatchedLetra(letra).ToString();
-            }
+        public FraseIsMissingException(string message) : base(message)
+        {
+        }
 
-            return telefone;
+        public FraseIsMissingException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected FraseIsMissingException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
         }
     }
 }

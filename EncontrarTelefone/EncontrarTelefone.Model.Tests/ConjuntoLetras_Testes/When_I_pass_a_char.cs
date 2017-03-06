@@ -14,19 +14,19 @@ namespace EncontrarTelefone.Domain.Testes.ConjuntoLetras_Testes
         [TestMethod]
         public void A_return_the_value_2()
         {
-            var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatchedLetra('A');
+            var conjuntoAlfabeto = new ConjuntoAlfabeto("A");
+            var value = conjuntoAlfabeto.GetMatched();
 
-            Assert.AreEqual('2', value);
+            Assert.AreEqual("2", value);
         }
 
         [TestMethod]
         public void K_return_the_value_5()
         {
-            var conjuntoAlfabeto = new ConjuntoAlfabeto();
-            var value = conjuntoAlfabeto.GetMatchedLetra('K');
+            var conjuntoAlfabeto = new ConjuntoAlfabeto("K");
+            var value = conjuntoAlfabeto.GetMatched();
 
-            Assert.AreEqual('5', value);
+            Assert.AreEqual("5", value);
         }
 
 

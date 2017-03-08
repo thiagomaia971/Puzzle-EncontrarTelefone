@@ -44,7 +44,7 @@ namespace EncontrarTelefone.Model.Tests.ConjuntoLetras_Testes
         [When(@"Eu executar o programa")]
         public void QuandoEuExecutarOPrograma()
         {
-            this.MockConjuntoAlfabeto.Setup(x => x.GetMatched()).Returns("222");
+            
             
         }
 
